@@ -1,0 +1,284 @@
+domestic_parcel:
+  100:
+    - kyoto: 1130
+    - hokkaido: 1730
+    - tohoku: 1400
+    - kanto: 1280
+    - shin_etsu: 1280
+    - hokuriku: 1180
+    - tokai: 1180
+    - kinki: 1180
+    - chugoku: 1180
+    - shikoku: 1180
+    - kyushu: 1280
+    - okinawa: 1730
+  120:
+    - kyoto: 1340
+    - hokkaido: 1940
+    - tohoku: 1610
+    - kanto: 1500
+    - shin_etsu: 1500
+    - hokuriku: 1400
+    - tokai: 1400
+    - kinki: 1400
+    - chugoku: 1400
+    - shikoku: 1400
+    - kyushu: 1500
+    - okinawa: 1900
+  140:
+    - kyoto: 1560
+    - hokkaido: 2160
+    - tohoku: 1830
+    - kanto: 1720
+    - shin_etsu: 1720
+    - hokuriku: 1610
+    - tokai: 1610
+    - kinki: 1610
+    - chugoku: 1610
+    - shikoku: 1610
+    - kyushu: 1720
+    - okinawa: 2160
+  160:
+    - kyoto: 1780
+    - hokkaido: 2370
+    - tohoku: 2040
+    - kanto: 1930
+    - shin_etsu: 1930
+    - hokuriku: 1830
+    - tokai: 1830
+    - kinki: 1830
+    - chugoku: 1830
+    - shikoku: 1830
+    - kyushu: 1930
+    - okinawa: 2370
+  170:
+    - kyoto: 2070
+    - hokkaido: 2710
+    - tohoku: 2360
+    - kanto: 2250
+    - shin_etsu: 2250
+    - hokuriku: 2140
+    - tokai: 2140
+    - kinki: 2140
+    - chugoku: 2140
+    - shikoku: 2140
+    - kyushu: 2250
+    - okinawa: 2710
+
+international_ems:
+  500:
+    - asia: 1400
+    - oceania: 2000
+    - nc_america: 2000
+    - middle_east: 2000
+    - europe: 2200
+    - south_america: 2400
+    - africa: 2400
+  600:
+    - asia: 1540
+    - oceania: 2180
+    - nc_america: 2180
+    - middle_east: 2180
+    - europe: 2400
+    - south_america: 2740
+    - africa: 2740
+  700:
+    - asia: 1680
+    - oceania: 2360
+    - nc_america: 2360
+    - middle_east: 2360
+    - europe: 2600
+    - south_america: 3080
+    - africa: 3080
+  800:
+    - asia: 1820
+    - oceania: 2540
+    - nc_america: 2540
+    - middle_east: 2540
+    - europe: 2800
+    - south_america: 3420
+    - africa: 3420
+  900:
+    - asia: 1960
+    - oceania: 2720
+    - nc_america: 2720
+    - middle_east: 2720
+    - europe: 3000
+    - south_america: 3760
+    - africa: 3760
+  1000:
+    - asia: 2100
+    - oceania: 2900
+    - nc_america: 2900
+    - middle_east: 2900
+    - europe: 3200
+    - south_america: 4100
+    - africa: 4100
+  1250:
+    - asia: 2400
+    - oceania: 3300
+    - nc_america: 3300
+    - middle_east: 3300
+    - europe: 3650
+    - south_america: 4900
+    - africa: 4900
+  1500:
+    - asia: 2700
+    - oceania: 3700
+    - nc_america: 3700
+    - middle_east: 3700
+    - europe: 4100
+    - south_america: 5700
+    - africa: 5700
+  1750:
+    - asia: 3000
+    - oceania: 4100
+    - nc_america: 4100
+    - middle_east: 4100
+    - europe: 4550
+    - south_america: 6500
+    - africa: 6500
+  2000:
+    - asia: 3300
+    - oceania: 4500
+    - nc_america: 4500
+    - middle_east: 4500
+    - europe: 5000
+    - south_america: 7300
+    - africa: 7300
+  2500:
+    - asia: 3800
+    - oceania: 5200
+    - nc_america: 5200
+    - middle_east: 5200
+    - europe: 5800
+    - south_america: 8800
+    - africa: 8800
+  3000:
+    - asia: 4300
+    - oceania: 5900
+    - nc_america: 5900
+    - middle_east: 5900
+    - europe: 6600
+    - south_america: 10300
+    - africa: 10300
+  3500:
+    - asia: 4800
+    - oceania: 6600
+    - nc_america: 6600
+    - middle_east: 6600
+    - europe: 7400
+    - south_america: 11800
+    - africa: 11800
+  4000:
+    - asia: 5300
+    - oceania: 7300
+    - nc_america: 7300
+    - middle_east: 7300
+    - europe: 8200
+    - south_america: 13300
+    - africa: 13300
+  4500:
+    - asia: 5800
+    - oceania: 8000
+    - nc_america: 8000
+    - middle_east: 8000
+    - europe: 9000
+    - south_america: 14800
+    - africa: 14800
+  5000:
+    - asia: 6300
+    - oceania: 8700
+    - nc_america: 8700
+    - middle_east: 8700
+    - europe: 9800
+    - south_america: 16300
+    - africa: 16300
+  5500:
+    - asia: 6800
+    - oceania: 9400
+    - nc_america: 9400
+    - middle_east: 9400
+    - europe: 10600
+    - south_america: 17800
+    - africa: 17800
+  6000:
+    - asia: 7300
+    - oceania: 10100
+    - nc_america: 10100
+    - middle_east: 10100
+    - europe: 11400
+    - south_america: 19300
+    - africa: 19300
+  7000:
+    - asia: 8100
+    - oceania: 11200
+    - nc_america: 11200
+    - middle_east: 11200
+    - europe: 12700
+    - south_america: 21400
+    - africa: 21400
+  8000:
+    - asia: 8900
+    - oceania: 12300
+    - nc_america: 12300
+    - middle_east: 12300
+    - europe: 14000
+    - south_america: 23500
+    - africa: 23500
+  9000:
+    - asia: 9700
+    - oceania: 13400
+    - nc_america: 13400
+    - middle_east: 13400
+    - europe: 15300
+    - south_america: 25600
+    - africa: 25600
+  10000:
+    - asia: 10500
+    - oceania: 14500
+    - nc_america: 14500
+    - middle_east: 14500
+    - europe: 16600
+    - south_america: 27700
+    - africa: 27700
+  11000:
+    - asia: 11300
+    - oceania: 15600
+    - nc_america: 15600
+    - middle_east: 15600
+    - europe: 17900
+    - south_america: 29800
+    - africa: 29800
+  12000:
+    - asia: 12100
+    - oceania: 16700
+    - nc_america: 16700
+    - middle_east: 16700
+    - europe: 19200
+    - south_america: 31900
+    - africa: 31900
+  13000:
+    - asia: 12900
+    - oceania: 17800
+    - nc_america: 17800
+    - middle_east: 17800
+    - europe: 20500
+    - south_america: 34000
+    - africa: 34000
+  14000:
+    - asia: 12900
+    - oceania: 17800
+    - nc_america: 17800
+    - middle_east: 17800
+    - europe: 20500
+    - south_america: 34000
+    - africa: 34000
+  15000:
+    - asia: 13700
+    - oceania: 18900
+    - nc_america: 18900
+    - middle_east: 18900
+    - europe: 21800
+    - south_america: 36100
+    - africa: 36100

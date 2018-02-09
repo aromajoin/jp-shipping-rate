@@ -1,0 +1,64 @@
+kyoto:
+  - Kyōto: "Kyōto"
+  - kyoto: "Kyoto"
+hokkaido:
+  - hokkaido: "Hokkaido"
+tohoku:
+  - aomori: "Aomori"
+  - iwate: "Iwate"
+  - miyagi: "Miyagi"
+  - akita: "Akita"
+  - yamagata: "Yamagata"
+  - fukushima_ken: "Fukushima-ken"
+kanto:
+  - ibaraki: "Ibaraki"
+  - tochigi: "Tochigi"
+  - gunma: "Gunma"
+  - saitama: "Saitama"
+  - chiba: "Chiba"
+  - kanagawa: "Kanagawa"
+  - yamanashi: "Yamanashi"
+  - tokyo: "Tokyo"
+  - Tōkyō: "Tōkyō"
+shin_etsu:
+  - niigata: "Niigata"
+  - nagano: "Nagano"
+hokuriku:
+  - toyama: "Toyama"
+  - ishikawa: "Ishikawa"
+  - fukui: "Fukui"
+tokai:
+  - shizuoka: "Shizuoka"
+  - aichi: "Aichi"
+  - gifu: "Gifu"
+  - mie: "Mie"
+kinki:
+  - nara: "Nara"
+  - shiga: "Shiga"
+  - Ōsaka: "Ōsaka"
+  - osaka: "Osaka"
+  - Hyōgo: "Hyōgo"
+  - hyogo: "Hyogo"
+  - wakayama: "Wakayama"
+chugoku:
+  - okayama: "Okayama"
+  - hiroshima: "Hiroshima"
+  - tottori: "Tottori"
+  - shimane: "Shimane"
+  - yamaguchi: "Yamaguchi"
+shikoku:
+  - tokushima: "Tokushima"
+  - kagawa: "Kagawa"
+  - ehime: "Ehime"
+  - Kōchi: "Kōchi"
+kyushu:
+  - fukuoka: "Fukuoka"
+  - oita: "Oita"
+  - Ōita: "Ōita"
+  - miyazaki: "Miyazaki"
+  - kagoshima: "Kagoshima"
+  - kumamoto: "Kumamoto"
+  - saga: "Saga"
+  - nagasaki: "Nagasaki"
+okinawa:
+  - okinawa: "Okinawa"
