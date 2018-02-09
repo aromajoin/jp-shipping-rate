@@ -1,6 +1,6 @@
 RSpec.describe JPShippingCost do
   it "has a version number" do
-    expect(JPShippingCost::VERSION).not_to be nil
+    expect(JPShippingRate::VERSION).not_to be nil
   end
 
   it "does something useful" do

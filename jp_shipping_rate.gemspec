@@ -1,7 +1,7 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "JPShippingRate/version"
+require "jp_shipping_rate/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "jp_shipping_rate"
