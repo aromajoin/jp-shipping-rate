@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "JPShippingCost/version"
+require "JPShippingRate/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "JPShippingCost"
-  spec.version       = JPShippingCost::VERSION
+  spec.name          = "jp_shipping_rate"
+  spec.version       = JPShippingRate::VERSION
   spec.authors       = ["Hanh D. TRAN"]
   spec.email         = ["tranduchanh.ms@gmail.com"]
 
@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ['lib']
+  spec.require_paths = ['lib', 'config']
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
