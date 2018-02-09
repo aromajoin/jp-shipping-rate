@@ -87,6 +87,7 @@ class JPShippingRate
   def international_extra_charges(base = 3_500, insurrance = false)
     extra = base
     extra += 3_000 if insurrance
+    extra
   end
 
   # Calculate an extra charge for domestic shipping
@@ -94,6 +95,7 @@ class JPShippingRate
   def domestic_extra_charges(base = 850, insurrance = false)
     extra = base
     extra += 1_000 if insurrance
+    extra
   end
 
   # Calculate EMS rate with given params
