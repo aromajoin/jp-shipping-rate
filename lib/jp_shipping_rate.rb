@@ -12,11 +12,11 @@ require_relative "jp_shipping_rate/version"
 #
 # Usage:
 # shipping_rate = JPShippingRate.instance
-# shipping_rate.international_shipping_rate(1500, "US")
+# shipping_rate.international(1500, "US")
 # => 8500
 # or 
 #
-# shipping_rate.domestic_shipping_rate(140, "okinawa") 
+# shipping_rate.domestic(140, "okinawa") 
 # => 3200
 #
 class JPShippingRate
@@ -33,7 +33,7 @@ class JPShippingRate
   # 2. Identify country region from country code of destination
   # 3. Look up the shipping rate for weight and region
   # 4. plus base extra charges for internaltional shipping and insurrance charge?
-  def international_shipping_rate(weight, to_country_code)
+  def international(weight, to_country_code)
     region = region_of_country(to_country_code)
     rate = 0
     rate += international_rate(weight, region) if weight > 0
@@ -45,7 +45,7 @@ class JPShippingRate
   # 2. state of destination is in lowercase format, e.g. kyoto, tokyo, osaka
   # 3. calculate cost with given size and state
   # 4. plus extra charges for domestic shipping and insurrance charge?
-  def domestic_shipping_rate(size = 120, to_state)
+  def domestic(size = 120, to_state)
     area = area_of_state(to_state)
     rate = 0
     rate += domestic_rate(size, area) if size > 0
