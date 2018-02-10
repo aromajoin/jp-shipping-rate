@@ -69,11 +69,11 @@ We also provides utility methods, please look at source codes.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/aromajoin/jp-shipping-rate. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/aromajoin/jp-shipping-fee. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Code of Conduct
 
-Everyone interacting in the JPShippingRate project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/aromajoin/jp-shipping-rate/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the JPShippingRate project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/aromajoin/jp-shipping-fee/blob/master/CODE_OF_CONDUCT.md).
 
 ## LICENSE
 
