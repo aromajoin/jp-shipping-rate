@@ -136,18 +136,22 @@ class JPShippingRate
 
   private
 
+    def root_path
+      File.expand_path '../..', __FILE__
+    end
+
     # Load data of EMS shipping rates
     def load_shipping_rates
-      YAML.load_file("config/rates.yml")
+      YAML.load_file("#{root_path}/config/rates.yml")
     end
 
     # Load data of region of countries
     def load_regions
-      YAML.load_file("config/countries.yml")
+      YAML.load_file("#{root_path}/config/countries.yml")
     end
 
     # Load Japan areas
     def load_domestic_areas
-      YAML.load_file("config/japan_areas.yml")
+      YAML.load_file("#{root_path}/config/japan_areas.yml")
     end
 end
