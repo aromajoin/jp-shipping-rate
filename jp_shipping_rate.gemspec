@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "jp_shipping_rate"
   spec.version       = JPShippingRate::VERSION
   spec.authors       = ["Hanh D. TRAN"]
-  spec.email         = ["tranduchanh.ms@gmail.com"]
+  spec.email         = ["tranduchanh@aromajoin.com"]
 
   spec.summary       = %q{A Ruby gem for Japan shipping rate calculation.}
   spec.description   = %q{it provides EMS shipping rate calculation for Japan}

@@ -4,8 +4,8 @@ A Ruby gem provides look-up and calculations tool for Japan Shipping Rate.
 
 At present, it supports international and domestic shipping methods:
 
-* With international shipping method is EMS fee.
-* With domestic (inside Japan) is Yu-Pack method, only support calculating for Kyoto deposite now.
+* With international shipping method is EMS fee = rate + extra charges.
+* With domestic (inside Japan) is Yu-Pack fee = domestic rate + extra charges. Only support calculating fee for Kyoto deposite now.
 
 ## Installation
 
@@ -25,12 +25,47 @@ Or install it yourself as:
 
 ## Usage
 
+### Instance
 
-## Development
+```Ruby
+shipping_rate = JPShippingRate.instance
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+### Calculate EMS fee with extra charges (base charges + insurrance cost)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```Ruby
+    shipping_rate.international(1500, "US")
+    => 8500 # equivalent to 8500 yen
+```
+
+### Or calculate domestic Yu-pack fee with with extra charges (base charges + insurrance cost)
+
+*Note: Just support domestic from Kyoto for now.*
+
+```Ruby
+    shipping_rate.domestic(140, "okinawa")
+    # => 3200 (yen)
+```
+
+### Only look-up shipping rate
+
+for EMS rate
+
+```Ruby
+    # weight = 3500 (g)
+    # region = "asia"
+    shipping_rate.international_rate(weight, region)
+```
+
+for JP domestic rate (Yu-pack)
+
+```Ruby
+    # size = 120 is total of length, width, height of parcel
+    # destination_area = "okinawa" area is based on Japan post service definition.
+    shipping_rate.domestic_rate(size, destination_area)
+```
+
+We also provides utility methods, please look at source codes.
 
 ## Contributing
 
