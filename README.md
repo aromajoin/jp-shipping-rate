@@ -12,7 +12,7 @@ At present, it supports international and domestic shipping methods:
 If you are in Rails, add this line to your application's Gemfile:
 
 ```ruby
-gem 'JPShippingCost'
+    gem 'jp_shipping_rate'
 ```
 
 And then execute:
@@ -21,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $gem install jp-shipping-rate
+    $gem install jp_shipping_rate
 
 ## Usage
 
