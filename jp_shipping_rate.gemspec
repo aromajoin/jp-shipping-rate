@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A Ruby gem for Japan shipping rate calculation.}
   spec.description   = %q{it provides EMS shipping rate calculation for Japan}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/aromajoin/jp-shipping-rate"
   spec.license       = 'MIT'
   spec.platform      = Gem::Platform.local
   spec.required_ruby_version = '>= 1.9.0'

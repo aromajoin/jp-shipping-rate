@@ -8,7 +8,8 @@ require_relative "jp_shipping_rate/version"
 
 #
 # This is a singleton class provides interface API calculate EMS shipping rate from Japan.
-# There are several basic functions such as look-up international shipping rate, domestic shipping rate.
+# There are several basic functions such as look-up international shipping rate,
+# domestic shipping rate, look-up region of a country, japan's area of a prefecture.
 #
 # Usage:
 # shipping_rate = JPShippingRate.instance
@@ -16,6 +17,7 @@ require_relative "jp_shipping_rate/version"
 # => 8500
 # or 
 #
+# Note: Just support domestic from Kyoto for now.
 # shipping_rate.domestic(140, "okinawa") 
 # => 3200
 #
@@ -46,7 +48,7 @@ class JPShippingRate
   # 3. calculate cost with given size and state
   # 4. plus extra charges for domestic shipping and insurrance charge?
   def domestic(size = 120, to_state)
-    area = area_of_state(to_state)
+    area = area_of_prefecture(to_state)
     rate = 0
     rate += domestic_rate(size, area) if size > 0
     rate += domestic_extra_charges
@@ -69,7 +71,7 @@ class JPShippingRate
 
   # Find domestic area of Japan's states
   # Such as: Hokkaido, Kanto, Okinawa, ...
-  def area_of_state(state_name = "kyoto")
+  def area_of_prefecture(state_name = "kyoto")
     result = "okinawa"
     @jp_areas.each do |area, states|
       states.each do |state|
@@ -116,7 +118,7 @@ class JPShippingRate
   end
 
   # Calculate domestic shipping rate with given params
-  # @param size::Integer - size of total H,W,Z
+  # @param size::Integer - size of total of length, width and height
   # @param area::String - Areas of Japan (Okinawa, Hokkaido, Kanto,...)
   def domestic_rate(size = 100, area = "okinawa")
     rate = 0
