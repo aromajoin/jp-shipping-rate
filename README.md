@@ -1,5 +1,7 @@
 # JPShippingRate
 
+[![Gem Version](https://badge.fury.io/rb/jp_shipping_rate.svg)](https://badge.fury.io/rb/jp_shipping_rate)
+
 A Ruby gem provides look-up and calculations tool for Japan Shipping Rate.
 
 At present, it supports international and domestic shipping methods:
@@ -12,7 +14,7 @@ At present, it supports international and domestic shipping methods:
 If you are in Rails, add this line to your application's Gemfile:
 
 ```ruby
-    gem 'jp_shipping_rate'
+gem 'jp_shipping_rate'
 ```
 
 And then execute:
