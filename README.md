@@ -2,6 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/jp_shipping_rate.svg)](https://badge.fury.io/rb/jp_shipping_rate)
 [![Maintainability](https://api.codeclimate.com/v1/badges/24f6e2854063f8364613/maintainability)](https://codeclimate.com/github/aromajoin/jp-shipping-rate/maintainability)
+[![Build Status](https://travis-ci.org/aromajoin/jp-shipping-rate.svg?branch=master)](https://travis-ci.org/aromajoin/jp-shipping-rate)
 
 A Ruby gem provides look-up and calculations tool for Japan Shipping Rate.
 
