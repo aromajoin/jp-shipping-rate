@@ -2,23 +2,25 @@
 
 # external modules
 require 'singleton'
-require "yaml"
+require 'yaml'
 
-require_relative "jp_shipping_rate/version"
+require_relative 'jp_shipping_rate/version'
 
 #
-# This is a singleton class provides interface API calculate EMS shipping rate from Japan.
+# This is a singleton class provides interface API calculate EMS shipping rate
+# from Japan.
 # There are several basic functions such as look-up international shipping rate,
-# domestic shipping rate, look-up region of a country, japan's area of a prefecture.
+# domestic shipping rate, look-up region of a country,
+# Japan's area of a prefecture.
 #
 # Usage:
 # shipping_rate = JPShippingRate.instance
 # shipping_rate.international(1500, "US")
 # => 8500
-# or 
+# or
 #
 # Note: Just support domestic from Kyoto for now.
-# shipping_rate.domestic(140, "okinawa") 
+# shipping_rate.domestic(140, "okinawa")
 # => 3200
 #
 class JPShippingRate
@@ -39,7 +41,7 @@ class JPShippingRate
     region = region_of_country(to_country_code)
     rate = 0
     rate += international_rate(weight, region) if weight > 0
-    rate += international_extra_charges
+    rate + international_extra_charges
   end
 
   # For domestic shipping:
@@ -113,7 +115,7 @@ class JPShippingRate
   # Calculate domestic shipping rate with given params
   # @param size::Integer - size of total of length, width and height
   # @param area::String - Areas of Japan (Okinawa, Hokkaido, Kanto,...)
-  def domestic_rate(size = 100, area = 'okinaw')
+  def domestic_rate(size = 100, area = 'okinawa')
     rate = 0
     @rates['domestic_parcel'].each do |w, r|
       next if w.to_i < size
