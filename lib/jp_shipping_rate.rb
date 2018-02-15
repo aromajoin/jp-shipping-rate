@@ -51,37 +51,33 @@ class JPShippingRate
     area = area_of_prefecture(to_state)
     rate = 0
     rate += domestic_rate(size, area) if size > 0
-    rate += domestic_extra_charges
+    rate + domestic_extra_charges
   end
 
   # Find region of the country
   # with given country code from the order info.
-  def region_of_country(country_code = "JP")
-    result = @regions["asia"].to_s
+  def region_of_country(country_code = 'JP')
+    result = @regions['asia'].to_s
     @regions.each do |region, countries|
       countries.each do |country|
-        if country[country_code] != nil
-          return result = region.to_s
-        end
+        return result = region.to_s unless country[country_code].nil?
       end
     end
   rescue NoMethodError
-    return "asia"
+    return 'asia'
   end
 
   # Find domestic area of Japan's states
   # Such as: Hokkaido, Kanto, Okinawa, ...
-  def area_of_prefecture(state_name = "kyoto")
-    result = "okinawa"
+  def area_of_prefecture(state_name = 'kyoto')
+    result = 'okinawa'
     @jp_areas.each do |area, states|
       states.each do |state|
-        if state[state_name] != nil
-          return result = area.to_s
-        end
+        return result = area.to_s unless state[state_name].nil?
       end
     end
   rescue NoMethodError
-    return "hokkaido"
+    return 'hokkaido'
   end
 
   # Calculate an extra charge for internation EMS
@@ -105,13 +101,10 @@ class JPShippingRate
   # @param: region::String - Regions that is defined by Japan Post service
   def international_rate(weight, region)
     rate = 0
-    @rates["international_ems"].each do |w, r|
-      unless w.to_i < weight
-        r.each do |r_rate|
-          unless r_rate[region].nil?
-            return rate = r_rate[region]
-          end
-        end
+    @rates['international_ems'].each do |w, r|
+      next if w.to_i < weight
+      r.each do |r_rate|
+        return rate = r_rate[region] unless r_rate[region].nil?
       end
     end
     rate
@@ -120,15 +113,12 @@ class JPShippingRate
   # Calculate domestic shipping rate with given params
   # @param size::Integer - size of total of length, width and height
   # @param area::String - Areas of Japan (Okinawa, Hokkaido, Kanto,...)
-  def domestic_rate(size = 100, area = "okinawa")
+  def domestic_rate(size = 100, area = 'okinaw')
     rate = 0
-    @rates["domestic_parcel"].each do |w, r|
-      unless w.to_i < size
-        r.each do |r_rate|
-          unless r_rate[area].nil?
-            return rate = r_rate[area]
-          end
-        end
+    @rates['domestic_parcel'].each do |w, r|
+      next if w.to_i < size
+      r.each do |r_rate|
+        return rate = r_rate[area] unless r_rate[area].nil?
       end
     end
     rate
@@ -136,22 +126,22 @@ class JPShippingRate
 
   private
 
-    def root_path
-      File.expand_path '../..', __FILE__
-    end
+  def root_path
+    File.expand_path '../..', __FILE__
+  end
 
-    # Load data of EMS shipping rates
-    def load_shipping_rates
-      YAML.load_file("#{root_path}/config/rates.yml")
-    end
+  # Load data of EMS shipping rates
+  def load_shipping_rates
+    YAML.load_file("#{root_path}/config/rates.yml")
+  end
 
-    # Load data of region of countries
-    def load_regions
-      YAML.load_file("#{root_path}/config/countries.yml")
-    end
+  # Load data of region of countries
+  def load_regions
+    YAML.load_file("#{root_path}/config/countries.yml")
+  end
 
-    # Load Japan areas
-    def load_domestic_areas
-      YAML.load_file("#{root_path}/config/japan_areas.yml")
-    end
+  # Load Japan areas
+  def load_domestic_areas
+    YAML.load_file("#{root_path}/config/japan_areas.yml")
+  end
 end
